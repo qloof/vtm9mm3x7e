@@ -22,35 +22,11 @@
     padding: 40px 20px;
   }
   .wrap { width: 100%; max-width: 640px; }
-  .auth { max-width: 420px; margin: 0 auto; }
-  .wrap.unlocked .auth { margin: 0; }
+  .auth { max-width: 420px; margin: 0 auto 20px; }
   .badge { width: 40px; height: 4px; background: var(--accent); border-radius: 4px; margin: 0 0 20px; }
   h1 { font-size: 1.4rem; margin: 0 0 6px; letter-spacing: -0.01em; }
   .sub { color: var(--muted); font-size: 0.95rem; margin: 0 0 28px; line-height: 1.5; }
-  #gate {
-    display: flex; flex-direction: column; gap: 14px;
-    background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
-    padding: 28px; box-shadow: 0 24px 48px -24px rgba(0, 0, 0, 0.6);
-  }
-  #gate input {
-    padding: 13px 14px; border: 1px solid var(--border); border-radius: 10px;
-    background: var(--surface-2); color: var(--text); font-size: 1rem;
-    transition: border-color 0.15s, box-shadow 0.15s;
-  }
-  #gate input:focus {
-    outline: none; border-color: var(--accent);
-    box-shadow: 0 0 0 3px rgba(242, 150, 15, 0.18);
-  }
-  #gate button {
-    padding: 13px 14px; border: none; border-radius: 10px; background: var(--accent);
-    color: var(--accent-text); font-size: 1rem; font-weight: 600; cursor: pointer;
-    transition: background 0.15s, transform 0.1s;
-  }
-  #gate button:hover { background: var(--accent-hover); }
-  #gate button:active { transform: scale(0.98); }
-  #gate-error { color: var(--danger); font-size: 0.85rem; }
-  #gate-error:empty { display: none; }
-  #content { display: none; margin-top: 8px; }
+  #content { margin-top: 8px; }
   section { margin-bottom: 28px; }
   .term-heading {
     font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em;
@@ -63,6 +39,7 @@
   }
   .row:hover { background: var(--surface); }
   .row-label { flex: 1; min-width: 160px; }
+  .row-links { display: flex; gap: 8px; flex-wrap: wrap; }
   .row-link {
     color: var(--text); text-decoration: none; font-size: 0.85rem;
     border: 1px solid var(--border); border-radius: 8px; padding: 6px 12px;
@@ -77,76 +54,49 @@
   <div class="auth">
   <div class="badge"></div>
   <h1>S3EM Class Portal</h1>
-  <p class="sub">Recordings &amp; materials for every lesson. Enter the class password to view.</p>
-  <div id="gate">
-    <input id="gate-input" type="password" placeholder="Password" autocomplete="off" />
-    <button id="gate-btn">Unlock</button>
-    <div id="gate-error"></div>
-  </div>
+  <p class="sub">Recordings &amp; materials for every lesson.</p>
   </div>
   <div id="content">
-<section><h3 class="term-heading">2026 &middot; Term 1</h3><div class="rows"><div class="row"><span class="row-label">S3EM Quadratic Equations 1 (Term 1 Dec 1)</span><a class="row-link" href="https://www.youtube.com/watch?v=ICmSISC0CK4" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1g_Z8ACc8g3SOJzDetgOevJuRykx0aq4R" target="_blank" rel="noopener">Materials</a></div>
-<div class="row"><span class="row-label">S3EM Quadratic Equations 2 (Term 1 Dec 2)</span><a class="row-link" href="https://www.youtube.com/watch?v=X7CNV6Mh17k" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1ibwm4xqZIvynlCX13K4lBdR_ZqTIwQqb" target="_blank" rel="noopener">Materials</a></div>
-<div class="row"><span class="row-label">S3EM Quadratic Graphs 1 (Term 1 Week 0)</span><a class="row-link" href="https://www.youtube.com/watch?v=uOxxsqfHBMI" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1TFiAXpX1IecIacGrGF4_gM3Qz_rZQR_-" target="_blank" rel="noopener">Materials</a></div>
-<div class="row"><span class="row-label">S3EM Quadratic Graphs 2 (Term 1 Week 1)</span><a class="row-link" href="https://www.youtube.com/watch?v=xYGiE3fJJF0" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1_Z5Kh-A_3wiLePFHeZz1at9mHhO9kCO1" target="_blank" rel="noopener">Materials</a></div>
-<div class="row"><span class="row-label">S3EM Indices 1 (Term 1 Week 2)</span><a class="row-link" href="https://www.youtube.com/watch?v=M6n-INbJlaA" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1yqfI3C4p-w90vEv0LI7bPftl8hhwFmrl" target="_blank" rel="noopener">Materials</a></div>
-<div class="row"><span class="row-label">S3EM Indices 2 (Term 1 Week 3)</span><a class="row-link" href="https://www.youtube.com/watch?v=n1YQgVvbyoI" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1M_qXFSnAxNKXbvHZos-f441TIQdEJZbq" target="_blank" rel="noopener">Materials</a></div>
-<div class="row"><span class="row-label">S3EM Linear Inequalities (Term 1 Week 4)</span><a class="row-link" href="https://www.youtube.com/watch?v=20MRy4o4OEo" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1ne5ubZ_0AhClmXt_8NvyfrjwsMEDoPuT" target="_blank" rel="noopener">Materials</a></div>
-<div class="row"><span class="row-label">S3EM WA1 Review (Term 1 Week 5)</span><a class="row-link" href="https://www.youtube.com/watch?v=llFDApcfx3A" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1R0eYfFYGu3Dz3Dv_4YT1OJwtdYsVbizJ" target="_blank" rel="noopener">Materials</a></div>
-<div class="row"><span class="row-label">S3EM WA1 Review 2 (Term 1 Week 6)</span><a class="row-link" href="https://www.youtube.com/watch?v=wCs0ZA2ElkE" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1U4xmYdO50d_O_TtgqzNEs_n1I5ul97o6" target="_blank" rel="noopener">Materials</a></div>
-<div class="row"><span class="row-label">S3EM WA1 Review (Term 1 Week 7)</span><a class="row-link" href="https://drive.google.com/drive/folders/1N8cVnYOzweGHEj9ft30eByUg44SNWUlT" target="_blank" rel="noopener">Materials</a></div>
-<div class="row"><span class="row-label">S3EM Standard Form (Term 1 Week 8)</span><a class="row-link" href="https://drive.google.com/drive/folders/1UhvjTRxF-Sv5JhFDQnYegrvbA6J6Jh2K" target="_blank" rel="noopener">Materials</a></div>
-<div class="row"><span class="row-label">S3EM Interest (Term 1 Week 9)</span><a class="row-link" href="https://www.youtube.com/watch?v=peYt7z8uMjY" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1h5--vJ3TdM557aWo4GGrjD-82l4ODC1Q" target="_blank" rel="noopener">Materials</a></div>
-<div class="row"><span class="row-label">S3EM Coordinate Geometry 1 (Term 1 Week 10)</span><a class="row-link" href="https://www.youtube.com/watch?v=XzEmTYloEGI" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/11w-HsPv3vXQ_mZVNl07qH9VAC2ZN8pFE" target="_blank" rel="noopener">Materials</a></div>
-<div class="row"><span class="row-label">S3EM Coordinate Geometry (Term 1 Break 1)</span><a class="row-link" href="https://drive.google.com/drive/folders/1Zf55qAcn3ENAa5UNv1Z-XfGvioukabIa" target="_blank" rel="noopener">Materials</a></div></div></section>
-<section><h3 class="term-heading">2026 &middot; Term 2</h3><div class="rows"><div class="row"><span class="row-label">S3EM Functions and Graphs 1 (Term 2 Week 1)</span><a class="row-link" href="https://www.youtube.com/watch?v=I9n96NVwJJc" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1n0XRZOoKUbeKK_ZN921fxuO08gBLbImr" target="_blank" rel="noopener">Materials</a></div>
-<div class="row"><span class="row-label">S3EM Functions and Graphs 2 (Term 2 Week 2)</span><a class="row-link" href="https://www.youtube.com/watch?v=KiQgwAnxNFE" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1bhN8m29XcX0wuLMgx6Gl-x4sZ2aTWGN0" target="_blank" rel="noopener">Materials</a></div>
-<div class="row"><span class="row-label">S3EM Review (Term 2 Week 3)</span><a class="row-link" href="https://www.youtube.com/watch?v=W8IMWR6Vsgc" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1NLn28y4T2I2WvrhDj3SgLqGJVUMgHKHg" target="_blank" rel="noopener">Materials</a></div>
-<div class="row"><span class="row-label">S3EM Coordinate Geometry Review (Term 2 Week 4)</span><a class="row-link" href="https://www.youtube.com/watch?v=rB0lF0bFPB0" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/17YvHA23t00hWDvKfjycxN76NAyHMse4Z" target="_blank" rel="noopener">Materials</a></div>
-<div class="row"><span class="row-label">S3EM WA2 Review 1 (Term 2 Week 5)</span><a class="row-link" href="https://www.youtube.com/watch?v=oqISb0Qo6MU" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/119zsTNiI-MQ543X9fzqqlZw2XEec5rKx" target="_blank" rel="noopener">Materials</a></div>
-<div class="row"><span class="row-label">S3EM WA2 Review 2 (Term 2 Week 6)</span><a class="row-link" href="https://www.youtube.com/watch?v=Gy_FDTGfsDw" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1oy7V9JnAKCdHXexrvXIN-FtsMrnbFcht" target="_blank" rel="noopener">Materials</a></div>
-<div class="row"><span class="row-label">S3EM WA2 Review 3 (Term 2 Week 7)</span><a class="row-link" href="https://www.youtube.com/watch?v=-s1mzjA8Xvk" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1h8BijtnkW0JEXs05w7VMMe5XJ8EJ7UWX" target="_blank" rel="noopener">Materials</a></div>
-<div class="row"><span class="row-label">S3EM Kinematics 1 (Term 2 Week 8)</span><a class="row-link" href="https://www.youtube.com/watch?v=Eg7r5eKyEes" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1f6MmYOKoFpAMMJ8Se_Qz9sm0JkT4xSRQ" target="_blank" rel="noopener">Materials</a></div>
-<div class="row"><span class="row-label">S3EM Kinematics 2 (Term 2 Week 9)</span><a class="row-link" href="https://www.youtube.com/watch?v=Z6na_vgFU64" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1zjAGtGBpPGkiZU8jHY-Uf83b0WuyiO9E" target="_blank" rel="noopener">Materials</a></div>
-<div class="row"><span class="row-label">S3EM Futher Trigonometry 1 (Term 2 Week 10)</span><a class="row-link" href="https://www.youtube.com/watch?v=ah7kkHm1Wn4" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1PAW7EigyN3RWYTqA_9NndLqpsK6Ym_jh" target="_blank" rel="noopener">Materials</a></div>
-<div class="row"><span class="row-label">S3EM Further Trigonometry 2 (Term 2 Break 1)</span><a class="row-link" href="https://www.youtube.com/watch?v=WCXuaGPpWsk" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1oEVkisLb6XlDQoR6pppczvelTXI1Kj2C" target="_blank" rel="noopener">Materials</a></div>
-<div class="row"><span class="row-label">S3EM Application of Trigonometry 1 (Term 2 Break 2)</span><a class="row-link" href="https://www.youtube.com/watch?v=pTcN5s7tHYA" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1WESz4vPbTs1TMi2yyoHF6F0DUkv3XBJc" target="_blank" rel="noopener">Materials</a></div>
-<div class="row"><span class="row-label">S3EM Applications of Trigonometry 2 (Term 2 Break 3)</span><a class="row-link" href="https://www.youtube.com/watch?v=bU42_7Fz3us" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1C3rhTCy9y78cHYjRGm1GCfx8IEx4_N4W" target="_blank" rel="noopener">Materials</a></div></div></section>
-<section><h3 class="term-heading">2026 &middot; Term 3</h3><div class="rows"><div class="row"><span class="row-label">S3EM Applications of Trigonometry 3 (Term 3 Week 1)</span><a class="row-link" href="https://www.youtube.com/watch?v=Z9D6kNWiCxE" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1HzK33vIoimFyvt1HoEPmvyoI7TpIrQZa" target="_blank" rel="noopener">Materials</a></div>
-<div class="row"><span class="row-label">S3EM Congruence and Similarity 1 (Term 3 Week 2)</span><a class="row-link" href="https://www.youtube.com/watch?v=NyhNHjChHSI" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1Kl1XgmQO_-46pkmc0HB9eZk2di9rLThD" target="_blank" rel="noopener">Materials</a></div>
-<div class="row"><span class="row-label">S3EM Congruence and Similarity 2 (Term 3 Week 3)</span><a class="row-link" href="https://www.youtube.com/watch?v=nRghYKY-eaY" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1vYt1ouyzeq4n57cUrjDcB7VMXPC9XKqi" target="_blank" rel="noopener">Materials</a></div>
-<div class="row"><span class="row-label">S3EM Area and Vol of Similar Shapes (Term 3 Week 4)</span><a class="row-link" href="https://www.youtube.com/watch?v=G0LjXTtz_xw" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/16yaoYkcecI69IztL2ETtARGJulVtiZ97" target="_blank" rel="noopener">Materials</a></div>
-<div class="row"><span class="row-label">S3EM WA3 Review 1 (Term 3 Week 5)</span><a class="row-link" href="https://www.youtube.com/watch?v=KmkgSMGGQfc" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1FwcmHHTYXvguOHlc4d8KteTObVflRFSG" target="_blank" rel="noopener">Materials</a></div>
-<div class="row"><span class="row-label">S3EM WA3 Review 2 (Term 3 Week 6)</span><a class="row-link" href="https://www.youtube.com/watch?v=7TZGhgtf5gM" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/174u9W4dpx13GboIp8cJlaAOBugQOTvnC" target="_blank" rel="noopener">Materials</a></div>
-<div class="row"><span class="row-label">S3EM WA3 Review 3 (Term 3 Week 7)</span><a class="row-link" href="https://www.youtube.com/watch?v=VoeKov5ky3A" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1cpxyG6lzUsTV2LbKmk6QtKC20PHST9U1" target="_blank" rel="noopener">Materials</a></div>
-<div class="row"><span class="row-label">S3EM Arc Length 1 (Term 3 Week 8)</span><a class="row-link" href="https://www.youtube.com/watch?v=lFjPzM_ukDQ" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1MdVQJ7kbyswXA6UnzsLu8LHgy62bfv9o" target="_blank" rel="noopener">Materials</a></div>
-<div class="row"><span class="row-label">S3EM Arc Length 2 (Term 3 Week 9)</span><a class="row-link" href="https://www.youtube.com/watch?v=eo7D5lrsARc" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1JZKZjegRzzmAoHgs7ivnbrG_096EkNFC" target="_blank" rel="noopener">Materials</a></div>
-<div class="row"><span class="row-label">S3EM Properties of Circles 1 (Term 3 Week 10)</span><a class="row-link" href="https://www.youtube.com/watch?v=-SLqB0vYrhM" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1ulsM6VjD3bkwNa0RbQkzv0gZ5ZQFLUZe" target="_blank" rel="noopener">Materials</a></div></div></section>
-<section><h3 class="term-heading">2026 &middot; Extra Classes</h3><div class="rows"><div class="row"><span class="row-label">S3EM Extra Class 1</span><a class="row-link" href="https://www.youtube.com/watch?v=WHyVtLdCFmc" target="_blank" rel="noopener">Recording</a></div>
-<div class="row"><span class="row-label">S3EM Extra Class 2</span><a class="row-link" href="https://www.youtube.com/watch?v=PHcuT_T6BCI" target="_blank" rel="noopener">Recording</a></div></div></section>
+<section><h3 class="term-heading">2026 &middot; Term 1</h3><div class="rows"><div class="row"><span class="row-label">S3EM Quadratic Equations 1 (Term 1 Dec 1)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=ICmSISC0CK4" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1g_Z8ACc8g3SOJzDetgOevJuRykx0aq4R" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S3EM Quadratic Equations 2 (Term 1 Dec 2)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=X7CNV6Mh17k" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1ibwm4xqZIvynlCX13K4lBdR_ZqTIwQqb" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S3EM Quadratic Graphs 1 (Term 1 Week 0)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=uOxxsqfHBMI" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1TFiAXpX1IecIacGrGF4_gM3Qz_rZQR_-" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S3EM Quadratic Graphs 2 (Term 1 Week 1)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=xYGiE3fJJF0" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1_Z5Kh-A_3wiLePFHeZz1at9mHhO9kCO1" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S3EM Indices 1 (Term 1 Week 2)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=M6n-INbJlaA" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1yqfI3C4p-w90vEv0LI7bPftl8hhwFmrl" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S3EM Indices 2 (Term 1 Week 3)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=n1YQgVvbyoI" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1M_qXFSnAxNKXbvHZos-f441TIQdEJZbq" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S3EM Linear Inequalities (Term 1 Week 4)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=20MRy4o4OEo" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1ne5ubZ_0AhClmXt_8NvyfrjwsMEDoPuT" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S3EM WA1 Review (Term 1 Week 5)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=llFDApcfx3A" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1R0eYfFYGu3Dz3Dv_4YT1OJwtdYsVbizJ" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S3EM WA1 Review 2 (Term 1 Week 6)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=wCs0ZA2ElkE" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1U4xmYdO50d_O_TtgqzNEs_n1I5ul97o6" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S3EM WA1 Review (Term 1 Week 7)</span><div class="row-links"><a class="row-link" href="https://drive.google.com/drive/folders/1N8cVnYOzweGHEj9ft30eByUg44SNWUlT" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S3EM Standard Form (Term 1 Week 8)</span><div class="row-links"><a class="row-link" href="https://drive.google.com/drive/folders/1UhvjTRxF-Sv5JhFDQnYegrvbA6J6Jh2K" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S3EM Interest (Term 1 Week 9)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=peYt7z8uMjY" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1h5--vJ3TdM557aWo4GGrjD-82l4ODC1Q" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S3EM Coordinate Geometry 1 (Term 1 Week 10)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=XzEmTYloEGI" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/11w-HsPv3vXQ_mZVNl07qH9VAC2ZN8pFE" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S3EM Coordinate Geometry (Term 1 Break 1)</span><div class="row-links"><a class="row-link" href="https://drive.google.com/drive/folders/1Zf55qAcn3ENAa5UNv1Z-XfGvioukabIa" target="_blank" rel="noopener">Materials</a></div></div></div></section>
+<section><h3 class="term-heading">2026 &middot; Term 2</h3><div class="rows"><div class="row"><span class="row-label">S3EM Functions and Graphs 1 (Term 2 Week 1)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=I9n96NVwJJc" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1n0XRZOoKUbeKK_ZN921fxuO08gBLbImr" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S3EM Functions and Graphs 2 (Term 2 Week 2)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=KiQgwAnxNFE" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1bhN8m29XcX0wuLMgx6Gl-x4sZ2aTWGN0" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S3EM Review (Term 2 Week 3)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=W8IMWR6Vsgc" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1NLn28y4T2I2WvrhDj3SgLqGJVUMgHKHg" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S3EM Coordinate Geometry Review (Term 2 Week 4)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=rB0lF0bFPB0" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/17YvHA23t00hWDvKfjycxN76NAyHMse4Z" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S3EM WA2 Review 1 (Term 2 Week 5)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=oqISb0Qo6MU" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/119zsTNiI-MQ543X9fzqqlZw2XEec5rKx" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S3EM WA2 Review 2 (Term 2 Week 6)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=Gy_FDTGfsDw" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1oy7V9JnAKCdHXexrvXIN-FtsMrnbFcht" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S3EM WA2 Review 3 (Term 2 Week 7)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=-s1mzjA8Xvk" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1h8BijtnkW0JEXs05w7VMMe5XJ8EJ7UWX" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S3EM Kinematics 1 (Term 2 Week 8)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=Eg7r5eKyEes" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1f6MmYOKoFpAMMJ8Se_Qz9sm0JkT4xSRQ" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S3EM Kinematics 2 (Term 2 Week 9)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=Z6na_vgFU64" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1zjAGtGBpPGkiZU8jHY-Uf83b0WuyiO9E" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S3EM Futher Trigonometry 1 (Term 2 Week 10)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=ah7kkHm1Wn4" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1PAW7EigyN3RWYTqA_9NndLqpsK6Ym_jh" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S3EM Further Trigonometry 2 (Term 2 Break 1)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=WCXuaGPpWsk" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1oEVkisLb6XlDQoR6pppczvelTXI1Kj2C" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S3EM Application of Trigonometry 1 (Term 2 Break 2)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=pTcN5s7tHYA" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1WESz4vPbTs1TMi2yyoHF6F0DUkv3XBJc" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S3EM Applications of Trigonometry 2 (Term 2 Break 3)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=bU42_7Fz3us" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1C3rhTCy9y78cHYjRGm1GCfx8IEx4_N4W" target="_blank" rel="noopener">Materials</a></div></div></div></section>
+<section><h3 class="term-heading">2026 &middot; Term 3</h3><div class="rows"><div class="row"><span class="row-label">S3EM Applications of Trigonometry 3 (Term 3 Week 1)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=Z9D6kNWiCxE" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1HzK33vIoimFyvt1HoEPmvyoI7TpIrQZa" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S3EM Congruence and Similarity 1 (Term 3 Week 2)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=NyhNHjChHSI" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1Kl1XgmQO_-46pkmc0HB9eZk2di9rLThD" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S3EM Congruence and Similarity 2 (Term 3 Week 3)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=nRghYKY-eaY" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1vYt1ouyzeq4n57cUrjDcB7VMXPC9XKqi" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S3EM Area and Vol of Similar Shapes (Term 3 Week 4)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=G0LjXTtz_xw" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/16yaoYkcecI69IztL2ETtARGJulVtiZ97" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S3EM WA3 Review 1 (Term 3 Week 5)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=KmkgSMGGQfc" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1FwcmHHTYXvguOHlc4d8KteTObVflRFSG" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S3EM WA3 Review 2 (Term 3 Week 6)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=7TZGhgtf5gM" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/174u9W4dpx13GboIp8cJlaAOBugQOTvnC" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S3EM WA3 Review 3 (Term 3 Week 7)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=VoeKov5ky3A" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1cpxyG6lzUsTV2LbKmk6QtKC20PHST9U1" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S3EM Arc Length 1 (Term 3 Week 8)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=lFjPzM_ukDQ" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1MdVQJ7kbyswXA6UnzsLu8LHgy62bfv9o" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S3EM Arc Length 2 (Term 3 Week 9)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=eo7D5lrsARc" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1JZKZjegRzzmAoHgs7ivnbrG_096EkNFC" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S3EM Properties of Circles 1 (Term 3 Week 10)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=-SLqB0vYrhM" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1ulsM6VjD3bkwNa0RbQkzv0gZ5ZQFLUZe" target="_blank" rel="noopener">Materials</a></div></div></div></section>
+<section><h3 class="term-heading">2026 &middot; Extra Classes</h3><div class="rows"><div class="row"><span class="row-label">S3EM Extra Class 1</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=WHyVtLdCFmc" target="_blank" rel="noopener">Recording</a></div></div>
+<div class="row"><span class="row-label">S3EM Extra Class 2</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=PHcuT_T6BCI" target="_blank" rel="noopener">Recording</a></div></div></div></section>
   </div>
 </div>
-<script>
-  (function () {
-    var PASSWORDS = ["98272807"];
-    var input = document.getElementById('gate-input');
-    var btn = document.getElementById('gate-btn');
-    var err = document.getElementById('gate-error');
-    var gate = document.getElementById('gate');
-    var content = document.getElementById('content');
-    var wrap = document.querySelector('.wrap');
-    function tryUnlock() {
-      if (PASSWORDS.indexOf(input.value) !== -1) {
-        gate.style.display = 'none';
-        content.style.display = 'block';
-        wrap.classList.add('unlocked');
-      } else {
-        err.textContent = 'Incorrect password.';
-      }
-    }
-    btn.addEventListener('click', tryUnlock);
-    input.addEventListener('keydown', function (ev) { if (ev.key === 'Enter') tryUnlock(); });
-  })();
-</script>
 </body>
 </html>

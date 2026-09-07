@@ -22,35 +22,11 @@
     padding: 40px 20px;
   }
   .wrap { width: 100%; max-width: 640px; }
-  .auth { max-width: 420px; margin: 0 auto; }
-  .wrap.unlocked .auth { margin: 0; }
+  .auth { max-width: 420px; margin: 0 auto 20px; }
   .badge { width: 40px; height: 4px; background: var(--accent); border-radius: 4px; margin: 0 0 20px; }
   h1 { font-size: 1.4rem; margin: 0 0 6px; letter-spacing: -0.01em; }
   .sub { color: var(--muted); font-size: 0.95rem; margin: 0 0 28px; line-height: 1.5; }
-  #gate {
-    display: flex; flex-direction: column; gap: 14px;
-    background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
-    padding: 28px; box-shadow: 0 24px 48px -24px rgba(0, 0, 0, 0.6);
-  }
-  #gate input {
-    padding: 13px 14px; border: 1px solid var(--border); border-radius: 10px;
-    background: var(--surface-2); color: var(--text); font-size: 1rem;
-    transition: border-color 0.15s, box-shadow 0.15s;
-  }
-  #gate input:focus {
-    outline: none; border-color: var(--accent);
-    box-shadow: 0 0 0 3px rgba(242, 150, 15, 0.18);
-  }
-  #gate button {
-    padding: 13px 14px; border: none; border-radius: 10px; background: var(--accent);
-    color: var(--accent-text); font-size: 1rem; font-weight: 600; cursor: pointer;
-    transition: background 0.15s, transform 0.1s;
-  }
-  #gate button:hover { background: var(--accent-hover); }
-  #gate button:active { transform: scale(0.98); }
-  #gate-error { color: var(--danger); font-size: 0.85rem; }
-  #gate-error:empty { display: none; }
-  #content { display: none; margin-top: 8px; }
+  #content { margin-top: 8px; }
   section { margin-bottom: 28px; }
   .term-heading {
     font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em;
@@ -78,12 +54,7 @@
   <div class="auth">
   <div class="badge"></div>
   <h1>S1 Class Portal</h1>
-  <p class="sub">Recordings &amp; materials for every lesson. Enter the class password to view.</p>
-  <div id="gate">
-    <input id="gate-input" type="password" placeholder="Password" autocomplete="off" />
-    <button id="gate-btn">Unlock</button>
-    <div id="gate-error"></div>
-  </div>
+  <p class="sub">Recordings &amp; materials for every lesson.</p>
   </div>
   <div id="content">
 <section><h3 class="term-heading">2026 &middot; Term 1</h3><div class="rows"><div class="row"><span class="row-label">S1 MATH Factors and Multiples (Term 1 Dec 1)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=BBNhAPFiJek" target="_blank" rel="noopener">Recording</a></div></div>
@@ -119,27 +90,5 @@
 <div class="row"><span class="row-label">S1 MATH Extra Class 2</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=vXb_rf-K3wQ" target="_blank" rel="noopener">Recording</a></div></div></div></section>
   </div>
 </div>
-<script>
-  (function () {
-    var PASSWORDS = ["98272807"];
-    var input = document.getElementById('gate-input');
-    var btn = document.getElementById('gate-btn');
-    var err = document.getElementById('gate-error');
-    var gate = document.getElementById('gate');
-    var content = document.getElementById('content');
-    var wrap = document.querySelector('.wrap');
-    function tryUnlock() {
-      if (PASSWORDS.indexOf(input.value) !== -1) {
-        gate.style.display = 'none';
-        content.style.display = 'block';
-        wrap.classList.add('unlocked');
-      } else {
-        err.textContent = 'Incorrect password.';
-      }
-    }
-    btn.addEventListener('click', tryUnlock);
-    input.addEventListener('keydown', function (ev) { if (ev.key === 'Enter') tryUnlock(); });
-  })();
-</script>
 </body>
 </html>

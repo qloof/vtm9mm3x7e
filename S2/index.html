@@ -22,35 +22,11 @@
     padding: 40px 20px;
   }
   .wrap { width: 100%; max-width: 640px; }
-  .auth { max-width: 420px; margin: 0 auto; }
-  .wrap.unlocked .auth { margin: 0; }
+  .auth { max-width: 420px; margin: 0 auto 20px; }
   .badge { width: 40px; height: 4px; background: var(--accent); border-radius: 4px; margin: 0 0 20px; }
   h1 { font-size: 1.4rem; margin: 0 0 6px; letter-spacing: -0.01em; }
   .sub { color: var(--muted); font-size: 0.95rem; margin: 0 0 28px; line-height: 1.5; }
-  #gate {
-    display: flex; flex-direction: column; gap: 14px;
-    background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
-    padding: 28px; box-shadow: 0 24px 48px -24px rgba(0, 0, 0, 0.6);
-  }
-  #gate input {
-    padding: 13px 14px; border: 1px solid var(--border); border-radius: 10px;
-    background: var(--surface-2); color: var(--text); font-size: 1rem;
-    transition: border-color 0.15s, box-shadow 0.15s;
-  }
-  #gate input:focus {
-    outline: none; border-color: var(--accent);
-    box-shadow: 0 0 0 3px rgba(242, 150, 15, 0.18);
-  }
-  #gate button {
-    padding: 13px 14px; border: none; border-radius: 10px; background: var(--accent);
-    color: var(--accent-text); font-size: 1rem; font-weight: 600; cursor: pointer;
-    transition: background 0.15s, transform 0.1s;
-  }
-  #gate button:hover { background: var(--accent-hover); }
-  #gate button:active { transform: scale(0.98); }
-  #gate-error { color: var(--danger); font-size: 0.85rem; }
-  #gate-error:empty { display: none; }
-  #content { display: none; margin-top: 8px; }
+  #content { margin-top: 8px; }
   section { margin-bottom: 28px; }
   .term-heading {
     font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em;
@@ -63,6 +39,7 @@
   }
   .row:hover { background: var(--surface); }
   .row-label { flex: 1; min-width: 160px; }
+  .row-links { display: flex; gap: 8px; flex-wrap: wrap; }
   .row-link {
     color: var(--text); text-decoration: none; font-size: 0.85rem;
     border: 1px solid var(--border); border-radius: 8px; padding: 6px 12px;
@@ -77,67 +54,46 @@
   <div class="auth">
   <div class="badge"></div>
   <h1>S2 Class Portal</h1>
-  <p class="sub">Recordings &amp; materials for every lesson. Enter the class password to view.</p>
-  <div id="gate">
-    <input id="gate-input" type="password" placeholder="Password" autocomplete="off" />
-    <button id="gate-btn">Unlock</button>
-    <div id="gate-error"></div>
-  </div>
+  <p class="sub">Recordings &amp; materials for every lesson.</p>
   </div>
   <div id="content">
-<section><h3 class="term-heading">2026 &middot; Term 1</h3><div class="rows"><div class="row"><span class="row-label">S2 MATH Simultaneous Equations 1 (Term 1 Dec 1)</span><a class="row-link" href="https://www.youtube.com/watch?v=rwXXrDIgTe0" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1ukv3OX5h54VHjwQasLi-SnxpaqvfsvZg" target="_blank" rel="noopener">Materials</a></div>
-<div class="row"><span class="row-label">S2 MATH Simultaneous Equations 2 (Term 1 Dec 2)</span><a class="row-link" href="https://www.youtube.com/watch?v=e06Re8W00WE" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1iEBzyTeESyGCkXeJhmANhYG4v1FNrmpy" target="_blank" rel="noopener">Materials</a></div>
-<div class="row"><span class="row-label">S2 MATH Linear Graphs 1 (Term 1 Week 0)</span><a class="row-link" href="https://www.youtube.com/watch?v=yYT0R0O-tIg" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/15lXD6M2P6EskrrN1b1GDKqrdhPGLiTh5" target="_blank" rel="noopener">Materials</a></div>
-<div class="row"><span class="row-label">S2 Simultaneous Graphs (Term 1 Week 1)</span><a class="row-link" href="https://drive.google.com/drive/folders/1OdOKAhofo-2y3O5ewPLLGeWpRHF2i5np" target="_blank" rel="noopener">Materials</a></div>
-<div class="row"><span class="row-label">S2 Linear Inequalities (Term 1 Week 2)</span><a class="row-link" href="https://drive.google.com/drive/folders/1WchbxmwFPAhvlBH1FP-ZxNU5IaSylLbZ" target="_blank" rel="noopener">Materials</a></div>
-<div class="row"><span class="row-label">S2 Algebra Review (Term 1 Week 3)</span><a class="row-link" href="https://drive.google.com/drive/folders/1Z7m99QThsjCSZkUk5n5z_UtkENGvyje_" target="_blank" rel="noopener">Materials</a></div>
-<div class="row"><span class="row-label">S2 MATH Quadratic Equations 1 (Term 1 Week 4)</span><a class="row-link" href="https://www.youtube.com/watch?v=2DtgkdBS9BE" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1tIfnI3yMmRRE53WakXjPG1FYl2EvMCBE" target="_blank" rel="noopener">Materials</a></div>
-<div class="row"><span class="row-label">S2 MATH WA1 Review 1 (Term 1 Week 5)</span><a class="row-link" href="https://www.youtube.com/watch?v=to95aGcQsdY" target="_blank" rel="noopener">Recording</a></div>
-<div class="row"><span class="row-label">S2 MATH WA1 Review 2 (Term 1 Week 6)</span><a class="row-link" href="https://www.youtube.com/watch?v=JYvL8x5n2Jo" target="_blank" rel="noopener">Recording</a></div>
-<div class="row"><span class="row-label">S2 MATH WA1 Review 3 (Term 1 Week 7)</span><a class="row-link" href="https://www.youtube.com/watch?v=P9s47P0EKAY" target="_blank" rel="noopener">Recording</a></div>
-<div class="row"><span class="row-label">S2 MATH Algebra Identities 2 (Term 1 Week 9)</span><a class="row-link" href="https://www.youtube.com/watch?v=ZL-8rnBmvwg" target="_blank" rel="noopener">Recording</a></div>
-<div class="row"><span class="row-label">S2 MATH Algebra Word Problems (Term 1 Break 1)</span><a class="row-link" href="https://www.youtube.com/watch?v=8YBB8pA7WvQ" target="_blank" rel="noopener">Recording</a></div></div></section>
-<section><h3 class="term-heading">2026 &middot; Term 2</h3><div class="rows"><div class="row"><span class="row-label">S2 MATH Quadratic Graphs 1 (Term 2 Week 1)</span><a class="row-link" href="https://www.youtube.com/watch?v=Y_XqB5RCLQA" target="_blank" rel="noopener">Recording</a></div>
-<div class="row"><span class="row-label">S2 MATH Algebra Fractions 2 (Term 2 Week 3)</span><a class="row-link" href="https://www.youtube.com/watch?v=EYyghHTOs2M" target="_blank" rel="noopener">Recording</a></div>
-<div class="row"><span class="row-label">S2 MATH Algebra Fractions 2 (Term 2 Week 4)</span><a class="row-link" href="https://www.youtube.com/watch?v=vn0Ot7OUPew" target="_blank" rel="noopener">Recording</a></div>
-<div class="row"><span class="row-label">S2 MATH Subj of Formula (Term 2 Week 5)</span><a class="row-link" href="https://www.youtube.com/watch?v=xKk1Zhu-K9Y" target="_blank" rel="noopener">Recording</a></div>
-<div class="row"><span class="row-label">S2 MATH Map Scales (Term 2 Week 8)</span><a class="row-link" href="https://www.youtube.com/watch?v=myP3inCnglo" target="_blank" rel="noopener">Recording</a></div>
-<div class="row"><span class="row-label">S2 MATH Proportion 1 (Term 2 Week 9)</span><a class="row-link" href="https://www.youtube.com/watch?v=WcnN-_tKBXc" target="_blank" rel="noopener">Recording</a></div>
-<div class="row"><span class="row-label">S2 MATH Pythagoras (Term 2 Break 1)</span><a class="row-link" href="https://www.youtube.com/watch?v=D380bb1aFOU" target="_blank" rel="noopener">Recording</a></div></div></section>
-<section><h3 class="term-heading">2026 &middot; Term 3</h3><div class="rows"><div class="row"><span class="row-label">S2 MATH Congruence and Similiarity (Term 3 Week 1)</span><a class="row-link" href="https://www.youtube.com/watch?v=IkwoNKJRYNw" target="_blank" rel="noopener">Recording</a></div>
-<div class="row"><span class="row-label">S2 MATH Probability (Term 3 Week 2)</span><a class="row-link" href="https://www.youtube.com/watch?v=8yasRGMjYuo" target="_blank" rel="noopener">Recording</a></div>
-<div class="row"><span class="row-label">S2 MATH Statistics (Term 3 Week 3)</span><a class="row-link" href="https://www.youtube.com/watch?v=YJmUF_2RkcA" target="_blank" rel="noopener">Recording</a></div>
-<div class="row"><span class="row-label">S2 MATH Statistics 2 (Term 3 Week 4)</span><a class="row-link" href="https://www.youtube.com/watch?v=6_bKDGtU-8g" target="_blank" rel="noopener">Recording</a></div>
-<div class="row"><span class="row-label">S2 MATH WA3 Review 1 (Term 3 Week 5)</span><a class="row-link" href="https://www.youtube.com/watch?v=ccHwHMayQd8" target="_blank" rel="noopener">Recording</a></div>
-<div class="row"><span class="row-label">S2 MATH WA3 Review 2 (Term 3 Week 6)</span><a class="row-link" href="https://www.youtube.com/watch?v=izmxmeSv14c" target="_blank" rel="noopener">Recording</a></div>
-<div class="row"><span class="row-label">S2 MATH WA3 Review 3 (Term 3 Week 7)</span><a class="row-link" href="https://www.youtube.com/watch?v=N3xBhFitql4" target="_blank" rel="noopener">Recording</a></div>
-<div class="row"><span class="row-label">S2 MATH Pyramids (Term 3 Week 8)</span><a class="row-link" href="https://www.youtube.com/watch?v=X05GRKn2GcM" target="_blank" rel="noopener">Recording</a></div>
-<div class="row"><span class="row-label">S2 MATH Volume (Term 3 Week 9)</span><a class="row-link" href="https://www.youtube.com/watch?v=_Zk0pDsa3n8" target="_blank" rel="noopener">Recording</a></div></div></section>
-<section><h3 class="term-heading">2026 &middot; Extra Classes</h3><div class="rows"><div class="row"><span class="row-label">S2 MATH Extra Class 1</span><a class="row-link" href="https://www.youtube.com/watch?v=-ELhJ-RX010" target="_blank" rel="noopener">Recording</a></div>
-<div class="row"><span class="row-label">S2 MATH Extra Class 2</span><a class="row-link" href="https://www.youtube.com/watch?v=ExZkyjJ42yk" target="_blank" rel="noopener">Recording</a></div></div></section>
+<section><h3 class="term-heading">2026 &middot; Term 1</h3><div class="rows"><div class="row"><span class="row-label">S2 MATH Simultaneous Equations 1 (Term 1 Dec 1)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=rwXXrDIgTe0" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1ukv3OX5h54VHjwQasLi-SnxpaqvfsvZg" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S2 MATH Simultaneous Equations 2 (Term 1 Dec 2)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=e06Re8W00WE" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1iEBzyTeESyGCkXeJhmANhYG4v1FNrmpy" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S2 MATH Linear Graphs 1 (Term 1 Week 0)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=yYT0R0O-tIg" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/15lXD6M2P6EskrrN1b1GDKqrdhPGLiTh5" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S2 Simultaneous Graphs (Term 1 Week 1)</span><div class="row-links"><a class="row-link" href="https://drive.google.com/drive/folders/1OdOKAhofo-2y3O5ewPLLGeWpRHF2i5np" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S2 Linear Inequalities (Term 1 Week 2)</span><div class="row-links"><a class="row-link" href="https://drive.google.com/drive/folders/1WchbxmwFPAhvlBH1FP-ZxNU5IaSylLbZ" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S2 Algebra Review (Term 1 Week 3)</span><div class="row-links"><a class="row-link" href="https://drive.google.com/drive/folders/1Z7m99QThsjCSZkUk5n5z_UtkENGvyje_" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S2 MATH Quadratic Equations 1 (Term 1 Week 4)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=2DtgkdBS9BE" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1tIfnI3yMmRRE53WakXjPG1FYl2EvMCBE" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S2 MATH WA1 Review 1 (Term 1 Week 5)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=to95aGcQsdY" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1uwJRBQ3mVPU5XqUZFavHl9ANWnuH5apj" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S2 MATH WA1 Review 2 (Term 1 Week 6)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=JYvL8x5n2Jo" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1z-MxjloIgbxn2JFWlE2GGK51gF6u-iNe" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S2 MATH WA1 Review 3 (Term 1 Week 7)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=P9s47P0EKAY" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1o5lQtl8bQB7s-QCS8J8kRinYR_ghaPND" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S2 Algebra Identities (Term 1 Week 8)</span><div class="row-links"><a class="row-link" href="https://drive.google.com/drive/folders/1YM_Qqbm2Nn6lh8g72e_vS4sjUspAo_W_" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S2 MATH Algebra Identities 2 (Term 1 Week 9)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=ZL-8rnBmvwg" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1QYgn7IV1vL9J6_PhnFuZL7iv_rNW4Onk" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S2 Quadratic Equations (Term 1 Week 10)</span><div class="row-links"><a class="row-link" href="https://drive.google.com/drive/folders/1mqm30R9M7UyWk6F9ftXjbeouPeoZRFvy" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S2 MATH Algebra Word Problems (Term 1 Break 1)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=8YBB8pA7WvQ" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/16B1Zu2vjJO0pn0BEm8UpWa9OxnHXwsPo" target="_blank" rel="noopener">Materials</a></div></div></div></section>
+<section><h3 class="term-heading">2026 &middot; Term 2</h3><div class="rows"><div class="row"><span class="row-label">S2 MATH Quadratic Graphs 1 (Term 2 Week 1)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=Y_XqB5RCLQA" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1TImz0pQJ7HZnMzNl_2AUte4I3-30yC0B" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S2 Quadratic Graphs (Term 2 Week 2)</span><div class="row-links"><a class="row-link" href="https://drive.google.com/drive/folders/1_cdNRG7nCA_qCtBKK56hk7MsI4FsFFcF" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S2 MATH Algebra Fractions 2 (Term 2 Week 3)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=EYyghHTOs2M" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1Epf4tJCAThlNGWTwAACImMN1DfehLlMY" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S2 MATH Algebra Fractions 2 (Term 2 Week 4)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=vn0Ot7OUPew" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1_QQ7yKTAypb5WCuqw82F8ILCBp5LjpEN" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S2 MATH Subj of Formula (Term 2 Week 5)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=xKk1Zhu-K9Y" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/16DH5h3_gYYUzoVQDXqlw7ypqiN0-SrT7" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S2 WA2 Review (Term 2 Week 6)</span><div class="row-links"><a class="row-link" href="https://drive.google.com/drive/folders/19IK_IA9SKyPBdheP-KdukqKqTn2l5CaO" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S2 WA2 Review (Term 2 Week 7)</span><div class="row-links"><a class="row-link" href="https://drive.google.com/drive/folders/1xJIWXUcFg3U7vnmXjwSN4MlFiStXp-Iz" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S2 MATH Map Scales (Term 2 Week 8)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=myP3inCnglo" target="_blank" rel="noopener">Recording</a></div></div>
+<div class="row"><span class="row-label">S2 MATH Proportion 1 (Term 2 Week 9)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=WcnN-_tKBXc" target="_blank" rel="noopener">Recording</a></div></div>
+<div class="row"><span class="row-label">S2 MATH Pythagoras (Term 2 Break 1)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=D380bb1aFOU" target="_blank" rel="noopener">Recording</a></div></div></div></section>
+<section><h3 class="term-heading">2026 &middot; Term 3</h3><div class="rows"><div class="row"><span class="row-label">S2 MATH Congruence and Similiarity (Term 3 Week 1)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=IkwoNKJRYNw" target="_blank" rel="noopener">Recording</a></div></div>
+<div class="row"><span class="row-label">S2 MATH Probability (Term 3 Week 2)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=8yasRGMjYuo" target="_blank" rel="noopener">Recording</a></div></div>
+<div class="row"><span class="row-label">S2 MATH Statistics (Term 3 Week 3)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=YJmUF_2RkcA" target="_blank" rel="noopener">Recording</a></div></div>
+<div class="row"><span class="row-label">S2 MATH Statistics 2 (Term 3 Week 4)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=6_bKDGtU-8g" target="_blank" rel="noopener">Recording</a></div></div>
+<div class="row"><span class="row-label">S2 MATH WA3 Review 1 (Term 3 Week 5)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=ccHwHMayQd8" target="_blank" rel="noopener">Recording</a></div></div>
+<div class="row"><span class="row-label">S2 MATH WA3 Review 2 (Term 3 Week 6)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=izmxmeSv14c" target="_blank" rel="noopener">Recording</a></div></div>
+<div class="row"><span class="row-label">S2 MATH WA3 Review 3 (Term 3 Week 7)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=N3xBhFitql4" target="_blank" rel="noopener">Recording</a></div></div>
+<div class="row"><span class="row-label">S2 MATH Pyramids (Term 3 Week 8)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=X05GRKn2GcM" target="_blank" rel="noopener">Recording</a></div></div>
+<div class="row"><span class="row-label">S2 MATH Volume (Term 3 Week 9)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=_Zk0pDsa3n8" target="_blank" rel="noopener">Recording</a></div></div>
+<div class="row"><span class="row-label">S2 MATH Volume 3 (Term 3 Week 10)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=GlFtRfrxdEI" target="_blank" rel="noopener">Recording</a></div></div></div></section>
+<section><h3 class="term-heading">2026 &middot; Extra Classes</h3><div class="rows"><div class="row"><span class="row-label">S2 MATH Extra Class 1</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=-ELhJ-RX010" target="_blank" rel="noopener">Recording</a></div></div>
+<div class="row"><span class="row-label">S2 MATH Extra Class 2</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=ExZkyjJ42yk" target="_blank" rel="noopener">Recording</a></div></div></div></section>
   </div>
 </div>
-<script>
-  (function () {
-    var PASSWORDS = ["98272807"];
-    var input = document.getElementById('gate-input');
-    var btn = document.getElementById('gate-btn');
-    var err = document.getElementById('gate-error');
-    var gate = document.getElementById('gate');
-    var content = document.getElementById('content');
-    var wrap = document.querySelector('.wrap');
-    function tryUnlock() {
-      if (PASSWORDS.indexOf(input.value) !== -1) {
-        gate.style.display = 'none';
-        content.style.display = 'block';
-        wrap.classList.add('unlocked');
-      } else {
-        err.textContent = 'Incorrect password.';
-      }
-    }
-    btn.addEventListener('click', tryUnlock);
-    input.addEventListener('keydown', function (ev) { if (ev.key === 'Enter') tryUnlock(); });
-  })();
-</script>
 </body>
 </html>
