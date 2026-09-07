@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>S1 Portal</title>
+<style>
+  /* Committed dark orange-on-black look (Longfen's explicit preference, 2026-09-01) --
+     not theme-adaptive on purpose, see color-scheme below. */
+  :root {
+    color-scheme: dark;
+    --bg: #131210; --surface: #1c1a16; --surface-2: #262019;
+    --text: #f3ede4; --muted: #9c9284; --border: #35302a;
+    --accent: #f2960f; --accent-hover: #d9820a; --accent-text: #171310;
+    --danger: #f0644a;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; background: var(--bg); color: var(--text);
+    font-family: system-ui, sans-serif;
+    display: flex; align-items: center; justify-content: center;
+    padding: 40px 20px;
+  }
+  .wrap { width: 100%; max-width: 640px; }
+  .auth { max-width: 420px; margin: 0 auto; }
+  .wrap.unlocked .auth { margin: 0; }
+  .badge { width: 40px; height: 4px; background: var(--accent); border-radius: 4px; margin: 0 0 20px; }
+  h1 { font-size: 1.4rem; margin: 0 0 6px; letter-spacing: -0.01em; }
+  .sub { color: var(--muted); font-size: 0.95rem; margin: 0 0 28px; line-height: 1.5; }
+  #gate {
+    display: flex; flex-direction: column; gap: 14px;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+    padding: 28px; box-shadow: 0 24px 48px -24px rgba(0, 0, 0, 0.6);
+  }
+  #gate input {
+    padding: 13px 14px; border: 1px solid var(--border); border-radius: 10px;
+    background: var(--surface-2); color: var(--text); font-size: 1rem;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  #gate input:focus {
+    outline: none; border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(242, 150, 15, 0.18);
+  }
+  #gate button {
+    padding: 13px 14px; border: none; border-radius: 10px; background: var(--accent);
+    color: var(--accent-text); font-size: 1rem; font-weight: 600; cursor: pointer;
+    transition: background 0.15s, transform 0.1s;
+  }
+  #gate button:hover { background: var(--accent-hover); }
+  #gate button:active { transform: scale(0.98); }
+  #gate-error { color: var(--danger); font-size: 0.85rem; }
+  #gate-error:empty { display: none; }
+  #content { display: none; margin-top: 8px; }
+  section { margin-bottom: 28px; }
+  .term-heading {
+    font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--accent); margin: 0 0 12px; padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  .row {
+    display: flex; align-items: center; gap: 12px; padding: 12px 14px;
+    border-radius: 10px; flex-wrap: wrap; transition: background 0.15s;
+  }
+  .row:hover { background: var(--surface); }
+  .row-label { flex: 1; min-width: 160px; }
+  .row-links { display: flex; gap: 8px; flex-wrap: wrap; }
+  .row-link {
+    color: var(--text); text-decoration: none; font-size: 0.85rem;
+    border: 1px solid var(--border); border-radius: 8px; padding: 6px 12px;
+    transition: border-color 0.15s, color 0.15s;
+  }
+  .row-link:hover { border-color: var(--accent); color: var(--accent); }
+  .empty { color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="auth">
+  <div class="badge"></div>
+  <h1>S1 Class Portal</h1>
+  <p class="sub">Recordings &amp; materials for every lesson. Enter the class password to view.</p>
+  <div id="gate">
+    <input id="gate-input" type="password" placeholder="Password" autocomplete="off" />
+    <button id="gate-btn">Unlock</button>
+    <div id="gate-error"></div>
+  </div>
+  </div>
+  <div id="content">
+<section><h3 class="term-heading">2026 &middot; Term 1</h3><div class="rows"><div class="row"><span class="row-label">S1 MATH Factors and Multiples (Term 1 Dec 1)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=BBNhAPFiJek" target="_blank" rel="noopener">Recording</a></div></div>
+<div class="row"><span class="row-label">S1 MATH Factors and Multiples (Term 1 Dec 2)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=Ia07pS5e9L0" target="_blank" rel="noopener">Recording</a></div></div>
+<div class="row"><span class="row-label">S1 MATH Approximation and Estimation (Term 1 Week 1)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=uadgmvTPWaA" target="_blank" rel="noopener">Recording</a></div></div>
+<div class="row"><span class="row-label">S1 MATH Real Numbers (Term 1 Week 2)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=k40dodfxiu8" target="_blank" rel="noopener">Recording</a></div></div>
+<div class="row"><span class="row-label">S1 MATH Real Numbers 2 (Term 1 Week 3)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=CfpLpvwEU8o" target="_blank" rel="noopener">Recording</a></div></div>
+<div class="row"><span class="row-label">S1 MATH Algebra Introduction (Term 1 Week 4)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=dN8isEJorGk" target="_blank" rel="noopener">Recording</a></div></div>
+<div class="row"><span class="row-label">S1 MATH WA1 Review 2 (Term 1 Week 6)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=D1asJQ44Mt4" target="_blank" rel="noopener">Recording</a></div></div>
+<div class="row"><span class="row-label">S1 MATH Algebra Manipulation 1 (Term 1 Week 8)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=pYr51kqrr0s" target="_blank" rel="noopener">Recording</a></div></div>
+<div class="row"><span class="row-label">S1 MATH Algebra Manipulation 2 (Term 1 Week 9)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=XG6MBnSv48s" target="_blank" rel="noopener">Recording</a></div></div>
+<div class="row"><span class="row-label">S1 MATH Algebra Manipulation (Term 1 Week 10)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=pTtwjfDoUZw" target="_blank" rel="noopener">Recording</a></div></div></div></section>
+<section><h3 class="term-heading">2026 &middot; Term 2</h3><div class="rows"><div class="row"><span class="row-label">S1 MATH Word Problems (Term 2 Week 1)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=BLqzTmfSGFw" target="_blank" rel="noopener">Recording</a></div></div>
+<div class="row"><span class="row-label">S1 MATH Coordinate Geometry 1 (Term 2 Week 2)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=V4at627RqvY" target="_blank" rel="noopener">Recording</a></div></div>
+<div class="row"><span class="row-label">S1 MATH Coordinate Geometry 2 (Term 2 Week 3)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=hTwAk8hkCic" target="_blank" rel="noopener">Recording</a></div></div>
+<div class="row"><span class="row-label">S1 MATH WA2 Review 1 (Term 2 Week 5)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=JIzzCbv2vxM" target="_blank" rel="noopener">Recording</a></div></div>
+<div class="row"><span class="row-label">S1 MATH WA2 Review 2 (Term 2 Week 6)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=gprEmwqoayI" target="_blank" rel="noopener">Recording</a></div></div>
+<div class="row"><span class="row-label">S1 MATH WA2 Review 3 (Term 2 Week 7)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=xa7AVnveg0U" target="_blank" rel="noopener">Recording</a></div></div>
+<div class="row"><span class="row-label">S1 Math Basic Geometry 1 (Term 2 Week 10)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=xw1zsFXA02s" target="_blank" rel="noopener">Recording</a></div></div>
+<div class="row"><span class="row-label">S1 MATH Basic Geometry 2 (Term 2 Break 1)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=FHQyK6NGmc8" target="_blank" rel="noopener">Recording</a></div></div>
+<div class="row"><span class="row-label">S1 MATH Triangles and Quadrilaterals (Term 2 Break 2)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=4eLkv9P1RMM" target="_blank" rel="noopener">Recording</a></div></div>
+<div class="row"><span class="row-label">S1 MATH Polygons (Term 2 Break 3)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=JVeOQyEX5L4" target="_blank" rel="noopener">Recording</a></div></div></div></section>
+<section><h3 class="term-heading">2026 &middot; Term 3</h3><div class="rows"><div class="row"><span class="row-label">S1 MATH Number Pattern 1 (Term 3 Week 1)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=XvimQhhgSeU" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1CGPT2Doe-9ZLRyxTxkjF47GJ-tdVcyfK" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S1 MATH Inequalities (Term 3 Week 2)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=rDpOCXHH9Ic" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1FtXQDaI-PbHjBs1_Tw6a4v3KHnWSaG1Y" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S1 MATH Construction (Term 3 Week 3)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=7jSMFxCvIpo" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1kfMOWsMcKlfhnVx6GkjFObiF4d2ZWj9Q" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S1 MATH Statistics (Term 3 Week 4)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=FDANEQQisYo" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1d3XlumjBr4tsyIAEnwacs_dtsk1qocQY" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S1 MATH WA3 Review 1 (Term 3 Week 5)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=Ri5Wi3mkTO4" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1L_-QWdde9avSBUmFo3yZw572HnpDBMIz" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S1 MATH WA3 Review 2 (Term 3 Week 6)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=_o2oZRZMpBA" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/13Z0LAbh82crmE_wOj9AwjIji75iWXzzI" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S1 MATH WA3 Review (Term 3 Week 7)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=HWdb-OSxT-Q" target="_blank" rel="noopener">Recording</a></div></div>
+<div class="row"><span class="row-label">S1 MATH Area and Perimeter 1 (Term 3 Week 8)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=r-b_-q5Lr2k" target="_blank" rel="noopener">Recording</a><a class="row-link" href="https://drive.google.com/drive/folders/1L-540FGqHIhYIdtE6tecgYnx6mNwBZmo" target="_blank" rel="noopener">Materials</a></div></div>
+<div class="row"><span class="row-label">S1 MATH Area and Perimeter 2 (Term 3 Week 9)</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=ojbGgtLGJI0" target="_blank" rel="noopener">Recording</a></div></div></div></section>
+<section><h3 class="term-heading">2026 &middot; Extra Classes</h3><div class="rows"><div class="row"><span class="row-label">S1 MATH Extra Class 1</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=ic5c8wRQKSQ" target="_blank" rel="noopener">Recording</a></div></div>
+<div class="row"><span class="row-label">S1 MATH Extra Class 2</span><div class="row-links"><a class="row-link" href="https://www.youtube.com/watch?v=vXb_rf-K3wQ" target="_blank" rel="noopener">Recording</a></div></div></div></section>
+  </div>
+</div>
+<script>
+  (function () {
+    var PASSWORDS = ["98272807"];
+    var input = document.getElementById('gate-input');
+    var btn = document.getElementById('gate-btn');
+    var err = document.getElementById('gate-error');
+    var gate = document.getElementById('gate');
+    var content = document.getElementById('content');
+    var wrap = document.querySelector('.wrap');
+    function tryUnlock() {
+      if (PASSWORDS.indexOf(input.value) !== -1) {
+        gate.style.display = 'none';
+        content.style.display = 'block';
+        wrap.classList.add('unlocked');
+      } else {
+        err.textContent = 'Incorrect password.';
+      }
+    }
+    btn.addEventListener('click', tryUnlock);
+    input.addEventListener('keydown', function (ev) { if (ev.key === 'Enter') tryUnlock(); });
+  })();
+</script>
+</body>
+</html>
